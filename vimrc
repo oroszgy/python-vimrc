@@ -67,7 +67,7 @@ set t_Co=256                                " set 256 colors
 colorscheme wombat256mod                    " set color scheme
 
 set number                                  " show line numbers
-set ruler
+" set ruler
 set ttyfast                                 " terminal acceleration
 
 set tabstop=4                               " 4 whitespaces for tabs visual presentation
