@@ -67,7 +67,7 @@ set t_Co=256                                " set 256 colors
 colorscheme wombat256mod                    " set color scheme
 
 set number                                  " show line numbers
-" set ruler
+set ruler
 set ttyfast                                 " terminal acceleration
 
 set tabstop=4                               " 4 whitespaces for tabs visual presentation
@@ -122,9 +122,9 @@ let g:airline_powerline_fonts=1
 "=====================================================
 let g:tagbar_autofocus=0
 let g:tagbar_width=42
-autocmd BufEnter *.py :call tagbar#autoopen(0)
-autocmd BufWinLeave *.py :TagbarClose
-
+"autocmd BufEnter *.py :call tagbar#autoopen(0)
+"autocmd BufWinLeave *.py :TagbarClose
+nmap <F8> :TagbarToggle<CR>
 "=====================================================
 "" NERDTree settings
 "=====================================================
@@ -200,7 +200,7 @@ augroup vimrc_autocmds
     autocmd FileType python,rst,c,cpp highlight Excess ctermbg=DarkGrey guibg=Black
     autocmd FileType python,rst,c,cpp match Excess /\%81v.*/
     autocmd FileType python,rst,c,cpp set nowrap
-    autocmd FileType python,rst,c,cpp set colorcolumn=80
+    autocmd FileType python,rst,c,cpp set colorcolumn=120
 augroup END
 
 " code folding
