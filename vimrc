@@ -124,7 +124,7 @@ let g:tagbar_autofocus=0
 let g:tagbar_width=42
 "autocmd BufEnter *.py :call tagbar#autoopen(0)
 "autocmd BufWinLeave *.py :TagbarClose
-nmap <F8> :TagbarToggle<CR>
+nmap ' :TagbarToggle<CR>
 "=====================================================
 "" NERDTree settings
 "=====================================================
@@ -200,7 +200,7 @@ augroup vimrc_autocmds
     autocmd FileType python,rst,c,cpp highlight Excess ctermbg=DarkGrey guibg=Black
     autocmd FileType python,rst,c,cpp match Excess /\%81v.*/
     autocmd FileType python,rst,c,cpp set nowrap
-    autocmd FileType python,rst,c,cpp set colorcolumn=120
+    autocmd FileType python,rst,c,cpp set colorcolumn=0
 augroup END
 
 " code folding
@@ -233,4 +233,5 @@ let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0
 
 nmap <leader>g :YcmCompleter GoTo<CR>
-nmap <leader>d :YcmCompleter GoToDefinition<CR>
+nmap <leader>d :YcmCompleter GetDoc<CR>
+nmap <leader>o :YcmCompleter GoToDefinition<CR>
